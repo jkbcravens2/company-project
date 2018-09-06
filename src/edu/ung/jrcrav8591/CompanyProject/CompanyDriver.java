@@ -135,7 +135,7 @@ public class CompanyDriver {
 					String supervisorSocial = sc.next();
 					updateEmployee.setSupervisorSsn(supervisorSocial);
 					boolean supervisor;
-					System.out.print("Is the employee a supervisor?: ");
+					System.out.print("Is this employee a supervisor?: ");
 					String isSuper = sc.next();
 					if (isSuper.equalsIgnoreCase("yes"))
 						supervisor = true;

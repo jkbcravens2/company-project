@@ -1,4 +1,4 @@
-#The Company Project reinforces the use of Object Oriented Programming principles.
+The Company Project reinforces the use of Object Oriented Programming principles.
   * __Inheritance__ is demonstrated by the "is a " relationship between the Supervisor and Employee classes
   * __Abstraction__ is demonstrated in the Employee class. There is one basic constructor that obly takes in 
   the employee's name and social security number. This is for quick entry into the system. The user will

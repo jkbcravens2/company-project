@@ -1,18 +1,22 @@
 package edu.ung.jrcrav8591.CompanyProject;
  
 public class Employee {
+	
+	//Instance variables for Employee class
 	protected String fullName;
 	protected String ssn;
 	private String phoneNumber, emailAddress, dob, startDate;
 	private String supervisorSsn;
 	private boolean isSupervisor;
 	
+	//Basic constructor. Only takes in name and ssn
 	public Employee(String name, String social)
 	{
 		fullName = name;
 		ssn = social;
 	}
 	
+	//Overloads basic constructor. Takes in all Employee information
 	public Employee(String name, String social, String phone, String email, String birthday, String start, 
 			String supervisorSocial, boolean supervisor)
 	{
@@ -26,6 +30,7 @@ public class Employee {
 		isSupervisor = supervisor;
 	}
 	
+	//Getters and setters for Employee object parameters
 	public String getSocial()
 	{
 		return ssn;
@@ -105,6 +110,7 @@ public class Employee {
 		isSupervisor = supervisor;
 	}
 	
+	//Returns whether one employee is the same as another employee
 	public boolean equals(Employee e)
 	{
 		boolean same = false;
@@ -113,6 +119,7 @@ public class Employee {
 		return same;
 	}
 	
+	//toString() method prints employee information
 	public String toString()
 	{
 		return "Employee Information" + "\n Name: " + getName() 

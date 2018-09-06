@@ -1,11 +1,14 @@
 package edu.ung.jrcrav8591.CompanyProject;
 
 public class Company {
+	
+	//Instance variables to be used in the Company object
 	private String companyName, companyLocation;
 	private int maxEmployees, maxSupervisors;
 	private Employee[] employeeArray;
 	private Supervisor[] supervisorArray;
 	
+	//Set up constructor to take in instance variables.
 	public Company(String name, String location, int employees, int supervisors)
 	{
 		companyName = name;
@@ -16,6 +19,7 @@ public class Company {
 		supervisorArray = new Supervisor[maxSupervisors];
 	}
 	
+	//Method to print all employees
 	public String printEmployees()
 	{
 		String print = "";
@@ -31,6 +35,7 @@ public class Company {
 		return print;
 	}
 	
+	//Method to prnt the list of supervisors
 	public String printSupervisors()
 	{
 		String printSupervisor = "";
@@ -46,6 +51,7 @@ public class Company {
 		return printSupervisor;
 	}
 	
+	//Linear search to find out if a specified person is an employee in the system
 	public String findEmployee(String name)
 	{
 		int i = 0, index = employeeArray.length;
@@ -62,6 +68,7 @@ public class Company {
 		return "This employee is in the system";
 	}
 	
+	//Finds and returns specified employee
 	public Employee getEmployee(String name){
 		Employee employee = null;
 		int i = 0;
@@ -75,6 +82,8 @@ public class Company {
 		}
 		return employee;
 	}
+	
+	//Add an employee to the list
 	public String addEmployee(Employee newEmployee) 
 	{
 		int i = 0;
@@ -101,6 +110,7 @@ public class Company {
 		return add;
 	}
 	
+	//Add a supervisor to the list
 	public void addSupervisor(Supervisor newSupervisor)
 	{
 		int i = 0;
@@ -115,6 +125,7 @@ public class Company {
 		}
 	}
 	
+	//Method to remove an employee from the system. If that employee is a supervisor, then it will also remove them from the supervisor list
 	public String removeEmployee(String name)
 	{
 		int i = 0;
@@ -151,6 +162,7 @@ public class Company {
 		return remove;
 	}
 	
+	//Removes a specified supervisor from the supervisor array. This method does not remove them from the employee list.
 	public void removeSupervisor(String name)
 	{
 		int i = 0;
@@ -166,6 +178,7 @@ public class Company {
 		}
 	}
 	
+	//toString() method to print the information of a company
 	public String toString()
 	{
 		String summary = "";

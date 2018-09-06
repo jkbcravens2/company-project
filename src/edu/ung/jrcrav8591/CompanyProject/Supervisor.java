@@ -1,4 +1,6 @@
 package edu.ung.jrcrav8591.CompanyProject;
+
+//Supervisor object inherits from the Employee object
 public class Supervisor extends Employee {
 	public Supervisor(String superName, String superSocial)
 	{

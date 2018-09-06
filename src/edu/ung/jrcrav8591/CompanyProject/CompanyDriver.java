@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class CompanyDriver {
 
 	public static void main(String[] args){
+		//----------------------------------------------------------------------------------------
+		//Main class for the Company Project. This sets up the menu that is used to create a new
+		//company and add/remove employees and supervisors from the company.
+		//----------------------------------------------------------------------------------------
 		int exit = 0;
 		Company newCompany = new Company("", "", 0, 0);
 		Scanner sc = new Scanner(System.in);
@@ -21,6 +25,8 @@ public class CompanyDriver {
 			System.out.println("9. Exit the program");
 			System.out.print("What would you like to do?: ");
 			int choice = sc.nextInt();
+			
+			//Creates a new company object
 			if (choice == 1)
 			{
 				System.out.print("What is the name of your company?: ");
@@ -37,6 +43,7 @@ public class CompanyDriver {
 					newCompany = new Company(companyName, location, maxEmployees, maxSupervisors);
 			}
 			
+			//Prints the information about the company. Catches an exception if there is no company information to print
 			else if (choice == 2)
 			{
 				try{
@@ -46,6 +53,7 @@ public class CompanyDriver {
 				}
 			}
 			
+			//Adds an employee to the system
 			else if (choice == 3)
 			{
 				Employee newEmployee = new Employee("","","","","","","",false);
@@ -84,6 +92,8 @@ public class CompanyDriver {
 					newCompany.addSupervisor(newSupervisor);
 				}
 			}
+			
+			//Searches to see if an employee exists in the system
 			else if (choice == 4)
 			{
 				System.out.print("What is the employee's name?: ");
@@ -91,6 +101,7 @@ public class CompanyDriver {
 				System.out.println(newCompany.findEmployee(name));
 			}
 			
+			//Removes an employee
 			else if (choice == 5)
 			{
 				System.out.print("What is the name of the employee you want to remove?: ");
@@ -98,15 +109,19 @@ public class CompanyDriver {
 				System.out.println(newCompany.removeEmployee(name));
 			}
 			
+			//Prints employee list
 			else if (choice == 6)
 			{
 				System.out.println(newCompany.printEmployees());
 			}
 			
+			//Prints supervisor list
 			else if (choice == 7)
 			{
 				System.out.println(newCompany.printSupervisors());
 			}
+			
+			//Updates existing employee's information
 			else if (choice == 8){
 				System.out.print("What is the name of the employee you want to update?: ");
 				String name = sc.next();
@@ -148,6 +163,8 @@ public class CompanyDriver {
 					System.out.println("This employee could not be found");
 			
 			}
+			
+			//Exits out of the program
 			else if (choice == 9)
 				exit = 9;	
 		}

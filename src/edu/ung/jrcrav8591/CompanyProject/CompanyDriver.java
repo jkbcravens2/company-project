@@ -1,8 +1,7 @@
-package edu.ung.jrcrav8591.CompanyProject;
+/*package edu.ung.jrcrav8591.CompanyProject;
 import java.util.Scanner;
 public class CompanyDriver {
-
-	public static void main(String[] args){
+    public static void main(String[] args){
 		//----------------------------------------------------------------------------------------
 		//Main class for the Company Project. This sets up the menu that is used to create a new
 		//company and add/remove employees and supervisors from the company.
@@ -170,4 +169,4 @@ public class CompanyDriver {
 		}
 		sc.close();
 	}
-}
+}*/

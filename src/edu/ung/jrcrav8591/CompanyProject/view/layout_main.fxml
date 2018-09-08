@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ung.jrcrav8591.CompanyProject.controller.Controller">
+   <children>
+      <Button layoutX="397.0" layoutY="361.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createCompanyBtn" prefHeight="25.0" prefWidth="100.0" text="Create" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="397.0" AnchorPane.rightAnchor="113.0" AnchorPane.topAnchor="361.0" />
+      <Button layoutX="496.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Cancel" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="496.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="361.0" />
+      <Label layoutX="14.0" layoutY="34.0" text="Company Name" AnchorPane.bottomAnchor="325.0" />
+      <Label layoutX="14.0" layoutY="84.0" text="Street Address" AnchorPane.bottomAnchor="295.0" />
+      <Label layoutX="14.0" layoutY="109.0" text="Address Line 2" AnchorPane.bottomAnchor="265.0" />
+      <Label layoutX="14.0" layoutY="133.0" text="City" AnchorPane.bottomAnchor="235.0" />
+      <TextField fx:id="company_name_text" layoutX="123.0" layoutY="30.0" prefHeight="25.0" prefWidth="198.0" AnchorPane.bottomAnchor="325.0" />
+      <TextField fx:id="company_address_text" layoutX="123.0" layoutY="80.0" prefHeight="25.0" prefWidth="469.0" AnchorPane.bottomAnchor="295.0" />
+      <TextField fx:id="company_address2_text" layoutX="123.0" layoutY="105.0" prefHeight="25.0" prefWidth="469.0" AnchorPane.bottomAnchor="265.0" AnchorPane.rightAnchor="8.0" />
+      <TextField fx:id="company_city_text" layoutX="123.0" layoutY="129.0" AnchorPane.bottomAnchor="235.0" />
+      <Label layoutX="286.0" layoutY="133.0" text="State" AnchorPane.bottomAnchor="235.0" />
+      <TextField fx:id="company_state_text" layoutX="323.0" layoutY="129.0" prefHeight="25.0" prefWidth="34.0" AnchorPane.bottomAnchor="235.0" />
+      <Label layoutX="397.0" layoutY="133.0" text="Zip" AnchorPane.bottomAnchor="235.0" />
+      <TextField fx:id="company_zip_text" layoutX="422.0" layoutY="129.0" prefHeight="25.0" prefWidth="168.0" AnchorPane.bottomAnchor="235.0" AnchorPane.rightAnchor="9.0" />
+      <Label layoutX="213.0" layoutY="14.0" prefHeight="25.0" prefWidth="147.0" text="Enter Company Information" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="240.0" />
+   </children>
+</AnchorPane>

@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
    <children>
-      <Label layoutX="14.0" layoutY="14.0" text="Employee's First Name" />
-      <TextField layoutX="131.0" layoutY="10.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Employee's First Name: " />
+      <TextField fx:id="employee_first_name_text" layoutX="151.0" layoutY="10.0" prefHeight="25.0" prefWidth="443.0" />
+      <Label layoutX="15.0" layoutY="44.0" text="Employee's Last Name: " />
+      <TextField fx:id="employee_last_name_text" layoutX="151.0" layoutY="40.0" prefHeight="25.0" prefWidth="443.0" />
+      <Label layoutX="16.0" layoutY="72.0" text="Employee's SSN: " />
+      <Label layoutX="329.0" layoutY="72.0" text="Phone Number: " />
+      <Label layoutX="14.0" layoutY="99.0" text="Email Address: " />
+      <Label layoutX="14.0" layoutY="130.0" text="Date of Birth: " />
+      <Label layoutX="329.0" layoutY="130.0" text="Start Date:" />
+      <TextField fx:id="employee_social_text" layoutX="151.0" layoutY="68.0" prefHeight="25.0" prefWidth="163.0" />
+      <TextField fx:id="employee_phone_text" layoutX="424.0" layoutY="68.0" prefHeight="25.0" prefWidth="170.0" />
+      <TextField fx:id="employee_email_text" layoutX="151.0" layoutY="95.0" prefHeight="25.0" prefWidth="443.0" />
+      <DatePicker fx:id="employee_start_date" layoutX="388.0" layoutY="126.0" />
+      <DatePicker fx:id="employee_dob_date" layoutX="151.0" layoutY="126.0" />
    </children>
 </AnchorPane>

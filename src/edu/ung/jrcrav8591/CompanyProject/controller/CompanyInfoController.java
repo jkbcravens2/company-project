@@ -35,7 +35,7 @@ public class CompanyInfoController {
                 company_name_label.setText(companyName);
                 company_address_label.setText(companyAddress);
                 company_city_label.setText(companyCity);
-                company_state_label.setText(companyCity);
+                company_state_label.setText(companyState);
                 company_zip_label.setText(companyZip);
                 connection.close();
             }

@@ -10,29 +10,38 @@ import java.sql.Statement;
 public class CompanyInfoController {
 
     @FXML
-    private Label company_name_label;
+    private Label company_name_label, company_address_label, company_city_label, company_zip_label, company_state_label;
 
     @FXML
-    private void initialize(){
-
+    private void initialize() {
         Connection connection;
         try {
-            String companyNameQuery = "SELECT NAME FROM Company LIMIT 1;";
-            String companyName = "";
+            String companyNameQuery = "SELECT NAME, Address, City, State, Zip FROM Company LIMIT 1;";
+
+            String companyName = "", companyAddress = "", companyCity = "", companyState = "", companyZip = "";
+
             connection = SQLiteConnector.connect();
             Statement statement;
-            if(connection != null){
+            if (connection != null) {
                 statement = connection.createStatement();
-                statement.executeQuery(companyNameQuery);
                 ResultSet result = statement.executeQuery(companyNameQuery);
-                while(result.next()){
+                while (result.next()) {
                     companyName = result.getString("name");
+                    companyAddress = result.getString("address");
+                    companyCity = result.getString("city");
+                    companyState = result.getString("state");
+                    companyZip = result.getString("zip");
                 }
                 company_name_label.setText(companyName);
+                company_address_label.setText(companyAddress);
+                company_city_label.setText(companyCity);
+                company_state_label.setText(companyCity);
+                company_zip_label.setText(companyZip);
                 connection.close();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
     }
 }

@@ -32,8 +32,6 @@ public class CompanyController {
     @FXML
     private TextField company_name_text, company_address_text, company_address2_text, company_city_text,
         company_state_text, company_zip_text;
-    private Label company_name_label;
-
 
     public void createCompanyBtn(ActionEvent event) throws Exception {
 
@@ -67,16 +65,13 @@ public class CompanyController {
             System.out.println(e.getMessage());
         }
 
-        company_name_label = new Label();
-        company_name_label.setText("poop");
-
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 
         URL url = new File("src/edu/ung/jrcrav8591/CompanyProject/view/layout_company_info.fxml").toURL();
 
         Parent root = FXMLLoader.load(url);
         window.setTitle("Company Info");
-        window.setScene(new Scene(root, 600, 400));
+        window.setScene(new Scene(root, 879, 607));
     }
 
 }

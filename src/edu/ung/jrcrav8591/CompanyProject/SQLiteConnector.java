@@ -9,7 +9,7 @@ public class SQLiteConnector {
         Connection connection;
         try{
             DriverManager.registerDriver(new org.sqlite.JDBC());
-            String url = "jdbc:sqlite:C:\\Users\\jkbcravens2\\IdeaProjects\\company-project\\companydata.db";
+            String url = "jdbc:sqlite:src/companydata.db";
             connection = DriverManager.getConnection(url);
             System.out.println("Database connection established");
 
@@ -23,10 +23,21 @@ public class SQLiteConnector {
                     "\t`zip`\tTEXT\n" +
                     ");";
 
+            String createEmployeesTable = "CREATE TABLE IF NOT EXISTS `Employees` (\n" +
+                    "\t`firstName`\tTEXT,\n" +
+                    "\t`lastName`\tTEXT,\n" +
+                    "\t`social`\tTEXT,\n" +
+                    "\t`phone`\tTEXT,\n" +
+                    "\t`email`\tTEXT,\n" +
+                    "\t`dob`\tSMALLDATETIME,\n" +
+                    "\t`startDate`\tSMALLDATETIME\n" +
+                    ");";
+
             Statement statement;
             if(connection != null){
                 statement = connection.createStatement();
                 statement.executeUpdate(createCompanyTable);
+                statement.executeUpdate(createEmployeesTable);
             }
 
             return connection;

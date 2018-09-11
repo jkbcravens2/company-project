@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
 
+import java.sql.Statement;
+import java.sql.Connection;
 
 public class Main extends Application {
 

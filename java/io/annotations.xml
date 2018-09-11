@@ -1,0 +1,5 @@
+<root>
+    <item name='java.io.File java.net.URL toURL()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

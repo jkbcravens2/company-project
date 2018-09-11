@@ -6,8 +6,6 @@ public class Employee {
     String firstName, lastName;
 	String social;
 	private String phone, email, dob, startDate;
-	private String supervisorSocial;
-	private boolean isSupervisor;
 	
 	//Basic constructor. Only takes in name and ssn
 	public Employee(String firstName, String lastName, String social)
@@ -18,8 +16,7 @@ public class Employee {
 	}
 	
 	//Overloads basic constructor. Takes in all Employee information
-	public Employee(String firstName, String lastName, String social, String phone, String email, String dob, String startDate,
-			String supervisorSocial, boolean supervisor)
+	public Employee(String firstName, String lastName, String social, String phone, String email, String dob, String startDate)
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -28,8 +25,6 @@ public class Employee {
 		this.email = email;
 		this.dob = dob;
 		this.startDate = startDate;
-		this.supervisorSocial = supervisorSocial;
-		isSupervisor = supervisor;
 	}
 
 	public String getFirstName()
@@ -44,7 +39,7 @@ public class Employee {
 		this.firstName = firstName;
 	}
 	
-	private String getPhone()
+	public String getPhone()
 	{
 		return phone;
 	}
@@ -54,7 +49,7 @@ public class Employee {
 		this.phone = phone;
 	}
 	
-	private String getEmail()
+	public String getEmail()
 	{
 		return email;
 	}
@@ -64,7 +59,7 @@ public class Employee {
 		this.email= email;
 	}
 	
-	private String getDob()
+	public String getDob()
 	{
 		return dob;
 	}
@@ -74,7 +69,7 @@ public class Employee {
 		this.dob = dob;
 	}
 	
-	private String getStartDate()
+	public String getStartDate()
 	{
 		return startDate;
 	}
@@ -83,24 +78,9 @@ public class Employee {
 	{
 		this.startDate = startDate;
 	}
-	
-	private String getSupervisorSsn()
-	{
-		return supervisorSocial;
-	}
-	
-	public void setSupervisorSsn(String supervisorSocial)
-	{
-		this.supervisorSocial = supervisorSocial;
-	}
-	
-	private boolean getSupervisor()
-	{
-			return isSupervisor;
-	}
-	
-	public void setSupervisor(boolean supervisor)
-	{
-		isSupervisor = supervisor;
-	}
+
+	public void setSocial(String social){this.social = social;}
+
+	public String getSocial(){return social;}
+
 }

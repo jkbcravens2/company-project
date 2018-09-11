@@ -3,6 +3,7 @@ package edu.ung.jrcrav8591.CompanyProject.controller;
 import java.io.File;
 import java.io.IOException;
 
+import java.net.URI;
 import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
@@ -65,13 +66,17 @@ public class CompanyController {
             System.out.println(e.getMessage());
         }
 
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        try {
+            URL url = new File("src/edu/ung/jrcrav8591/CompanyProject/view/layout_company_info.fxml").toURI().toURL();
 
-        URL url = new File("src/edu/ung/jrcrav8591/CompanyProject/view/layout_company_info.fxml").toURL();
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        Parent root = FXMLLoader.load(url);
-        window.setTitle("Company Info");
-        window.setScene(new Scene(root, 879, 607));
+            Parent root = FXMLLoader.load(url);
+            window.setTitle("Company Info");
+            window.setScene(new Scene(root, 1031, 645));
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 
 }

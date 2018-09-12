@@ -3,9 +3,10 @@ package edu.ung.jrcrav8591.CompanyProject.model;
 public class Employee {
 	
 	//Instance variables for Employee class
-    protected String firstName, lastName;
-	protected String social;
+    String firstName, lastName;
+	String social;
 	private String phone, email, dob, startDate;
+	private boolean isSupervisor;
 	
 	//Basic constructor. Only takes in name and ssn
 	public Employee(String firstName, String lastName, String social)
@@ -16,7 +17,7 @@ public class Employee {
 	}
 	
 	//Overloads basic constructor. Takes in all Employee information
-	public Employee(String firstName, String lastName, String social, String phone, String email, String dob, String startDate)
+	public Employee(String firstName, String lastName, String social, String phone, String email, String dob, String startDate, boolean isSupervisor)
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -25,6 +26,7 @@ public class Employee {
 		this.email = email;
 		this.dob = dob;
 		this.startDate = startDate;
+		this.isSupervisor = isSupervisor;
 	}
 
 	public String getFirstName()
@@ -83,4 +85,11 @@ public class Employee {
 
 	public String getSocial(){return social;}
 
+    public boolean isSupervisor() {
+        return isSupervisor;
+    }
+
+    public void setSupervisor(boolean supervisor) {
+        isSupervisor = supervisor;
+    }
 }

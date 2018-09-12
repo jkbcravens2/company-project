@@ -4,8 +4,6 @@ public class Company {
 	
 	//Instance variables to be used in the Company object
 	private String name, address, address2, city, state, zip;
-	private Employee[] employeeArray;
-	private Supervisor[] supervisorArray;
 	
 	//Set up constructor to take in instance variables.
 	public Company(String name, String address, String address2, String city, String state, String zip)

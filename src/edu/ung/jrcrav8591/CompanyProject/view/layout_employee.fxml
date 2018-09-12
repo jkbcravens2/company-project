@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -8,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ung.jrcrav8591.CompanyProject.controller.EmployeeController">
    <children>
-      <Label layoutX="14.0" layoutY="14.0" text="Employee's First Name: " />
+      <Label layoutX="14.0" layoutY="157.0" text="Supervisor?" />
       <TextField fx:id="employee_first_name_text" layoutX="151.0" layoutY="10.0" prefHeight="25.0" prefWidth="443.0" />
       <Label layoutX="15.0" layoutY="44.0" text="Employee's Last Name: " />
       <TextField fx:id="employee_last_name_text" layoutX="151.0" layoutY="40.0" prefHeight="25.0" prefWidth="443.0" />
@@ -22,6 +23,9 @@
       <TextField fx:id="employee_email_text" layoutX="151.0" layoutY="95.0" prefHeight="25.0" prefWidth="443.0" />
       <DatePicker fx:id="employee_start_date" layoutX="388.0" layoutY="126.0" />
       <DatePicker fx:id="employee_dob_date" layoutX="151.0" layoutY="126.0" />
-      <Button layoutX="416.0" layoutY="361.0" mnemonicParsing="false" onAction="#addNewEmployee" text="Add Employee" />
+      <Button fx:id="addEmployeeBtn" layoutX="416.0" layoutY="361.0" mnemonicParsing="false" onAction="#addNewEmployee" text="Add Employee" />
+      <CheckBox fx:id="supervisor_checkbox" layoutX="151.0" layoutY="157.0" mnemonicParsing="false" />
+      <Button layoutX="515.0" layoutY="361.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="81.0" text="Cancel" />
+      <Label layoutX="16.0" layoutY="14.0" text="Employee's First Name:" />
    </children>
 </AnchorPane>

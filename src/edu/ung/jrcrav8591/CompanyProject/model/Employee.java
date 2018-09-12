@@ -3,8 +3,8 @@ package edu.ung.jrcrav8591.CompanyProject.model;
 public class Employee {
 	
 	//Instance variables for Employee class
-    String firstName, lastName;
-	String social;
+    protected String firstName, lastName;
+	protected String social;
 	private String phone, email, dob, startDate;
 	
 	//Basic constructor. Only takes in name and ssn

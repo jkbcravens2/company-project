@@ -1,27 +1,24 @@
 package edu.ung.jrcrav8591.CompanyProject;
 
+import edu.ung.jrcrav8591.CompanyProject.controller.CompanyInfoController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
-import java.sql.Statement;
-import java.sql.Connection;
 
 public class Main extends Application {
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         launch(args);
     }
 
-    public void start(Stage window) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("view/layout_main.fxml"));
-        window.setTitle("Create New Company");
-        window.setScene(new Scene(root, 600, 400));
-        window.show();
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("view/layout_company_info.fxml"));
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 1031, 645));
+        primaryStage.show();
     }
 }
-

@@ -23,7 +23,7 @@ public class EmployeeController {
     @FXML
     private DatePicker employee_dob_date, employee_start_date;
 
-    public void addNewEmployee(ActionEvent event) throws Exception{
+    public void addNewEmployee(ActionEvent event){
 
         String employeeFirstName = employee_first_name_text.getText();
         String employeeLastName = employee_last_name_text.getText();

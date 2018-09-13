@@ -149,7 +149,7 @@ public class CompanyInfoController{
         ObservableList<EmployeeTable> data = FXCollections.observableArrayList();
         try{
             Connection connection = SQLiteConnector.connect();
-            String query = "SELECT * FROM Employees WHERE supervisor = '1' ";
+            String query = "SELECT * FROM Employees WHERE isSupervisor = '1' ";
             assert connection != null;
             ResultSet result = connection.createStatement().executeQuery(query);
             while(result.next()){

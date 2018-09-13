@@ -62,7 +62,7 @@
                   <items>
                         <Menu mnemonicParsing="false" text="New">
                           <items>
-                              <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                              <MenuItem mnemonicParsing="false" onAction="#createNewCompany" text="Company" />
                             <MenuItem mnemonicParsing="false" onAction="#createNewEmployee" text="Employee" />
                           </items>
                         </Menu>
